@@ -1,0 +1,21 @@
+<div class="game-wrapper">
+    <aside>
+        <div class="asideWrap">            
+            <button (click)="doGame(1)" tabindex="0">Small</button>
+            <button (click)="doGame(2)" tabindex="0">Medium</button>
+            <button (click)="doGame(3)" tabindex="0">Big</button>
+            <div class="shell">
+                <p>Matches</p>
+                <p class="counter">0</p>
+            </div>
+            <div class="shell">
+                <p>Tries</p>
+                <p class="counter2">0</p>
+            </div>
+        </div>
+    </aside>
+
+    <div class="memory-game">
+        <ng-container #anchor></ng-container>        
+    </div>
+</div>

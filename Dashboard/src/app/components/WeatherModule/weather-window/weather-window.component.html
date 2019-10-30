@@ -1,0 +1,20 @@
+<div 
+class="window-drag  appWindow" 
+cdkDragBoundary=".drag-boundary" 
+[ngStyle]="{
+    'z-index': data.index, 
+    'left' : left, 
+    'top' : top }"
+id="{{data.id}}"
+cdkDrag
+>  
+    <div class="window-handle" cdkDragHandle (mousedown)="toggleIndex($event)">
+        <span class="options" (click)="minimize()" ></span>
+        <a (click)=close() class="close"></a>        
+        <span> Weather {{data.id}}</span>
+    </div>  
+    
+        
+   <weather-app></weather-app>
+
+</div>

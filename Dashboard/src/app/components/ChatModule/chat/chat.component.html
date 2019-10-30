@@ -1,0 +1,22 @@
+
+<div class="chat-wrapper">
+    <aside>
+        <div class="asideWrap">            
+            <button (click)="goToApple(1)" >Apple</button>
+            <button (click)="goToBanana(2)" >Banana</button>
+        </div>
+    </aside>
+
+    <div class="chat">
+        <div class="messages" >
+            <ng-container #anchor></ng-container>
+            <div class="system">Please enter your name</div>
+
+        </div>
+
+        <form class="user-form" >
+            <textarea name="userText" id="userText" rows="1" placeholder="Type your answer"></textarea>
+            <input type="button" value="Send" (click)="send()" id="sendBtn">
+        </form>
+    </div>
+</div>

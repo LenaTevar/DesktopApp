@@ -1,0 +1,52 @@
+<div class="wrap">
+
+    <div class="loading">
+            <div class="progress container">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+            </div>
+    </div>
+
+    <div class="show" *ngIf="display">
+        <h3>Weather</h3>
+        <h1>{{display.name}}</h1>
+        <img src={{img}} alt="Weather Image">
+        <table>
+            <tr>
+                <th>Temp</th>
+                <td>{{display.main.temp}} C</td>
+            </tr>
+            <tr>
+                <th>Temp Max</th>
+                <td>{{display.main.temp_max}} C</td>
+            </tr>
+            <tr>
+                <th>Temp Min</th>
+                <td>{{display.main.temp_min }} C</td>
+            </tr>
+            <tr>
+                    <th>Description</th>
+                    <td>{{display.weather[0].description }}</td>
+                </tr>
+        </table>
+    
+
+        <div class="search">
+            <input type="search" name="search" id="search" placeholder="Enter City" #city>
+            <input type="button" value="search" (click)="getByCity(city)">
+        </div>
+        
+        
+    </div>
+    <div *ngIf="cityNameWrong" class="error">
+        <p>
+            City Not Found: Please use search
+        </p>
+    </div>
+</div>
