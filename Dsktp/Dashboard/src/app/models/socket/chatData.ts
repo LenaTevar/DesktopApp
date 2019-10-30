@@ -10,6 +10,7 @@ export class ChatData {
 
   constructor () {
     this.type = 'message'
-    this.key = 'eDBE76deU7L0H9mEBgxUKVR0VCnq0XBd'
+    this.key = 'LNU CHAT KEY HERE'
+    Console.log('You need the key from the university!!')
   }
 }
