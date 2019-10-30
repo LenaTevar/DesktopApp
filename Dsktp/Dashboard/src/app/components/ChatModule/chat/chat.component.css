@@ -1,0 +1,85 @@
+.chat-wrapper {
+    background-color: orange;
+    box-sizing: border-box;
+	margin: 0;
+    padding: 0;
+    padding-top: 3px;
+    height: 100%;
+    display: flex;
+}
+
+aside {
+    background-image: linear-gradient(to bottom, #5c8599, #345361);
+
+    width: 15%;
+    height: 100%;
+    order: 1;
+}
+
+.chat {
+    background-image: url('../../../../assets/images/orangebg.png');
+    display:flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    overflow: auto;
+    width: 85%;
+    order: 2;
+}
+.messages{
+    height: 80%;
+    max-height: 400px;
+    display:flex;
+    flex: 0 1 100%;
+    flex-flow: column nowrap;
+    justify-content:flex-start;
+    overflow-y: auto;
+}
+
+.chat .user-form {
+    height: 20%;
+    display: flex;
+}
+.hide {
+    display: none;
+}
+textarea {
+    width: 75%;
+    border: solid 1px gray;
+}
+#sendBtn {
+    width: 25%;
+    float: right;
+    display: block;
+    color: #f2f2f2;
+    background: #345361;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+
+    border: none;
+    cursor:pointer;
+    outline:none;
+}
+#sendBtn:hover {
+    background: #b7eeee;
+    color: #08162b;
+}
+button {
+    width: 100%;
+    display: block;
+    color: #f2f2f2;
+    background: #345361;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+
+    border: none;
+    cursor:pointer;
+    outline:none;
+}
+button:hover{
+    background: #b7eeee;
+    color: #08162b;
+}

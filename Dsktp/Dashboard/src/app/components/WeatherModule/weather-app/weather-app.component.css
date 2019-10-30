@@ -1,0 +1,112 @@
+.wrap {
+    background-image: url('../../../../assets/images/orangebg.png');
+    box-sizing: border-box;
+  	margin: 0;
+    padding: 0;
+    padding-top: 3px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: #01122c;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+table {
+  width: 100%;
+}
+th, td{
+    text-align: left;
+    background-color: rgb(235, 97, 55, 0.3);
+}
+
+.hide {
+    display: none;
+}
+
+.search{
+  display:block;
+  margin-top: 5px;
+}
+
+input[type=search]{
+  font-size: 17px;
+  width: 100%;
+}
+
+input[type=button]{
+  color: #f2f2f2;
+  background: #345361;
+  text-align: center;
+  padding: 5px;
+  text-decoration: none;
+  font-size: 17px;
+  width: 100%;
+  border: none;
+  cursor:pointer;
+  outline:none;
+}
+input[type=button]:hover{
+  background: #b7eeee;
+  color: #01122c;
+}
+.error{
+  width: 100%;
+  padding: 5px 0;
+  margin: 5px 0;
+  position: absolute;
+  bottom: 0;
+  font-size: larger;
+  
+}
+.error p {
+  color: #f2f2f2;
+  background: rgb(97, 52, 78);
+}
+.error .search {
+  background-color: transparent;
+}
+
+
+/* +
+ANIMATION
+Reference: https://codepen.io/rajarju/pen/pFrIt
+Author: Arjun Raj
+*/
+.progress{
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -20px 0 0 -50px;
+  }
+  .progress span{
+    transition: all 500ms ease;
+    background: #4A72DA;
+    box-shadow: 1px 2px 3px #999;
+    height: 10px;
+    width: 10px;  
+    display: inline-block;
+    border-radius: 10px;
+    animation: wave 2s ease  infinite;
+  }  
+  
+  .progress span:nth-child(1){  animation-delay: 0ms; }
+  .progress span:nth-child(2){  animation-delay: 100ms; }
+  .progress span:nth-child(3){  animation-delay: 200ms; }
+  .progress span:nth-child(4){  animation-delay: 300ms; }
+  .progress span:nth-child(5){  animation-delay: 400ms; }
+  .progress span:nth-child(6){  animation-delay: 500ms; }
+  .progress span:nth-child(7){  animation-delay: 600ms; }
+  .progress span:nth-child(8){  animation-delay: 700ms; }
+  
+  @keyframes wave{
+    0%, 40%, 100% { 
+      transform: translate(0, 0);
+      background-color: #58b1ac;    
+    }
+    10% { 
+      transform: translate(0, -15px); 
+      background-color: #7a0d3b;    
+    }  
+  }

@@ -1,0 +1,130 @@
+/*No  Direct Game related CSS
+CSS Errors in validation because Angular
+*/
+.game-wrapper {
+    background-image: url('../../../../assets/images/orangebg.png');
+    box-sizing: border-box;
+	margin: 0;
+    padding: 0;
+    padding-top: 5px;
+    height: 100%;
+    display: flex;
+}
+
+aside {
+    background-image: linear-gradient(to bottom, #5c8599, #345361);
+    
+    width: 15%;
+    height: 100%;
+    order: 1;
+}
+aside > .asideWrap {
+    margin-top: 15px;
+}
+.asideWrap > button{
+    width: 100%;
+    display: block;
+    color: #f2f2f2;
+    background: #345361;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+
+    border: none;
+    cursor:pointer;
+    outline:none;
+}
+.asideWrap > button:focus{
+    box-shadow: 0 0 10px rgb(3, 255, 179);
+    font-weight: bolder;
+}
+.asideWrap > .shell {
+    width: 100%;
+    display: block;
+    color: #f2f2f2;
+    background: rgb(97, 52, 78);
+    text-align: center;
+    padding: 5px 0px;
+    font-size: inherit;
+}
+.asideWrap button:hover{
+    background: #b7eeee;
+    color: #08162b;
+}
+
+/*Cards*/
+.memory-game{
+    width: 400px;
+    height: 400px;
+
+    margin: auto;
+    margin-top: 25px;
+    display: flex;
+    order:2;
+    flex-wrap: wrap;
+    perspective: 1000px;
+}
+:host ::ng-deep .memory-card {
+    flex-grow: 1;
+    width: 45%;
+    backface-visibility: hidden;
+    margin: 5px;
+    padding: 0;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .3s;
+    display: inherit;
+    background-color: transparent;
+    border:none;
+    align-items: center;
+}
+
+/*Firefox remove border*/
+:host ::ng-deep .memory-card::-moz-focus-inner {
+    border: 0;
+  }
+  
+  
+:host ::ng-deep .memory-card:focus{
+    
+    box-shadow: 0 0 10px rgb(121, 74, 20);
+}
+:host ::ng-deep .memory-card.big {
+    flex-grow: 1;
+    width: 20%;
+
+    backface-visibility: hidden;
+    margin: 5px;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .3s;
+}
+:host ::ng-deep .memory-card:active {
+    transform: scale(.97);
+    transition: transform .2s;
+}
+
+:host ::ng-deep .memory-card.flip{
+    
+    transform: rotateY(180deg);
+}
+
+:host ::ng-deep .front-face, :host ::ng-deep .back-face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 1px;    
+}
+
+
+:host ::ng-deep .front-face{
+    transform: rotateY(180deg);
+}
+:host ::ng-deep .hide {
+    visibility: hidden;
+    transition: transform .2s;
+}
+

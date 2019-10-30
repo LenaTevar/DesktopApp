@@ -1,0 +1,29 @@
+<div class="drag-boundary">  
+  <ng-container #anchor></ng-container>
+</div>
+<nav>
+   <button type="button" id="chatBtn" (click)="createChat()">
+     <img src="../assets/images/chat.png">
+   </button>
+
+   <button id="gameBtn" (click)="createGame()">
+     <img src="../assets/images/game.png">
+   </button>
+
+   <button id="myAppBtn" (click)="createApp()" >
+      <img src="../assets/images/sun.png">
+    </button>
+   <!--Show minimize if current Apps length > zero -->
+   <div class="dropdown" *ngIf="currentApps.length > 0">
+     <img src="../assets/images/minimize.png">
+     <div class="dropdown-content">
+       <a *ngFor="let app of currentApps" 
+        (click)="minim($event)" 
+        id="{{app.id}}">
+        {{app.type}} - {{app.id}}
+       </a>
+     </div>
+   </div>
+</nav>
+
+
